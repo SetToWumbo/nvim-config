@@ -13,3 +13,4 @@ vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help ta
 
 vim.keymap.set("n", "<leader>n", ":Neotree filesystem reveal left toggle <CR>")
 vim.keymap.set("n", "<leader>f", ":Neotree filesystem focus  <CR>")
+vim.keymap.set("n", "<leader>sg", ":Neotree git_status show left toggle <CR>")
