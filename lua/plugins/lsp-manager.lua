@@ -19,6 +19,7 @@ return {
 		opts = {
 			ensure_installed = {
 				"lua_ls",
+				"marksman",
 				"jsonls",
 				"ts_ls",
 				"html",
@@ -35,16 +36,18 @@ return {
 		"neovim/nvim-lspconfig",
 		config = function()
 			local lspconfig = require("lspconfig")
+			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-			lspconfig.lua_ls.setup({})
-			lspconfig.jsonls.setup({})
-			lspconfig.ts_ls.setup({})
-			lspconfig.html.setup({})
-			lspconfig.cssls.setup({})
-			lspconfig.omnisharp.setup({})
-			lspconfig.pyright.setup({})
-			lspconfig.sqlls.setup({})
-			lspconfig.vimls.setup({})
+			lspconfig.lua_ls.setup({ capabilities = capabilities })
+			lspconfig.marksman.setup({ capabilities = capabilities })
+			lspconfig.jsonls.setup({ capabilities = capabilities })
+			lspconfig.ts_ls.setup({ capabilities = capabilities })
+			lspconfig.html.setup({ capabilities = capabilities })
+			lspconfig.cssls.setup({ capabilities = capabilities })
+			lspconfig.omnisharp.setup({ capabilities = capabilities })
+			lspconfig.pyright.setup({ capabilities = capabilities })
+			lspconfig.sqlls.setup({ capabilities = capabilities })
+			lspconfig.vimls.setup({ capabilities = capabilities })
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})

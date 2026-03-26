@@ -1,6 +1,6 @@
 vim.g.mapleader = " "
 vim.opt.tabstop = 2 -- Number of spaces a tab represents
-vim.opt.shiftwidth = 4 -- Number of spaces for each indentation level
+vim.opt.shiftwidth = 2 -- Number of spaces for each indentation level
 vim.opt.softtabstop = 2 -- Number of spaces for soft tabs
 vim.opt.expandtab = true -- Convert tabs to spaces
 vim.wo.number = true
