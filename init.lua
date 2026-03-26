@@ -21,9 +21,6 @@ local opts = {}
 
 require("lazy").setup("plugins")
 
-require("lualine").setup()
-require("nvim-treesitter").setup()
-require("nvim-treesitter").install {"lua","javascript", "c", "c_sharp", "css", "html", "python"}
 
 require("remap")
 
