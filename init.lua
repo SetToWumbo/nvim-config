@@ -1,5 +1,4 @@
-require("nikola")
-
+vim.g.mapleader = " "
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -26,13 +25,6 @@ require("lualine").setup()
 require("nvim-treesitter").setup()
 require("nvim-treesitter").install {"lua","javascript", "c", "c_sharp", "css", "html", "python"}
 
-local builtin = require("telescope.builtin")
-vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
-vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+require("remap")
 
-vim.keymap.set('n', '<leader>n', ':Neotree filesystem reveal left toggle <CR>')
-vim.keymap.set('n', '<leader>f', ':Neotree filesystem focus  <CR>')
 
-vim.cmd.colorscheme "palenight"
