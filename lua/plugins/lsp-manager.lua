@@ -19,6 +19,7 @@ return {
 		opts = {
 			ensure_installed = {
 				"lua_ls",
+				"jsonls",
 				"ts_ls",
 				"html",
 				"cssls",
@@ -36,6 +37,7 @@ return {
 			local lspconfig = require("lspconfig")
 
 			lspconfig.lua_ls.setup({})
+			lspconfig.jsonls.setup({})
 			lspconfig.ts_ls.setup({})
 			lspconfig.html.setup({})
 			lspconfig.cssls.setup({})

@@ -1,6 +1,7 @@
-return{
-	 "alexmozaidze/palenight.nvim", name = "palenight" ,
+return {
+	"alexmozaidze/palenight.nvim",
+	name = "palenight",
 	config = function()
-		vim.cmd.colorscheme "palenight"
-	end
+		vim.cmd.colorscheme("palenight")
+	end,
 }
