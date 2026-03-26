@@ -1,7 +1,7 @@
 require("nikola")
 
-
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   local lazyrepo = "https://github.com/folke/lazy.nvim.git"
   local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
@@ -35,10 +35,10 @@ local plugins = {
 },
 { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate"}
 }
-require("lazy").setup(
- plugins, opts
-)
+
+require("lazy").setup(plugins, opts)
 require("lualine").setup()
+require("nvim-treesitter").setup()
 
 local builtin = require("telescope.builtin")
 vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
@@ -46,4 +46,8 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live gr
 vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
 
+require("nvim-treesitter").install {"lua","javascript", "c", "c_sharp", "css", "html", "python"}
+
 vim.cmd.colorscheme "palenight"
+
+
