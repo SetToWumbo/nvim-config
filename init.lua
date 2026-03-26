@@ -21,7 +21,6 @@ local opts = {}
 
 require("lazy").setup("plugins")
 
-
 require("remap")
 
 
