@@ -33,12 +33,22 @@ local plugins = {
         { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
     }
 },
-{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate"}
+{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
+{"nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
+      "nvim-tree/nvim-web-devicons", -- optional, but recommended
+    },
+    lazy = false, -- neo-tree will lazily load itself
+  }
 }
 
 require("lazy").setup(plugins, opts)
 require("lualine").setup()
 require("nvim-treesitter").setup()
+require("nvim-treesitter").install {"lua","javascript", "c", "c_sharp", "css", "html", "python"}
 
 local builtin = require("telescope.builtin")
 vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
@@ -46,8 +56,7 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live gr
 vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
 
-require("nvim-treesitter").install {"lua","javascript", "c", "c_sharp", "css", "html", "python"}
+vim.keymap.set('n', '<leader>n', ':Neotree filesystem reveal left toggle <CR>')
+vim.keymap.set('n', '<leader>f', ':Neotree focus <CR>')
 
 vim.cmd.colorscheme "palenight"
-
-
