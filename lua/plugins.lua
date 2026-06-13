@@ -34,6 +34,7 @@ local MiniPick = require('mini.pick')
 local MiniExtra = require('mini.extra')
 MiniPick.setup()
 MiniExtra.setup()
+
 vim.keymap.set('n', '<leader>pf', function() MiniPick.builtin.files() end, { desc = 'Mini file picker' })
 vim.keymap.set('n', '<leader>ps', function() MiniPick.builtin.grep({ pattern = vim.fn.expand("<cword>") }) end,
     { desc = 'Mini pattern search' })
