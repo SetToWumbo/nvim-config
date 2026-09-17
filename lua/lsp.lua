@@ -16,7 +16,7 @@ vim.lsp.config("*", { capabilities = capabilities })
 vim.lsp.config("lua_ls", {
     settings = {
         Lua = {
-            diagnostics = {globals = {"vim"}},
+            diagnostics = { globals = { "vim" } },
         },
     },
 })
