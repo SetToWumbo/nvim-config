@@ -30,7 +30,7 @@ vim.opt.splitright = true
 vim.opt.termguicolors = true -- enable 24bit rgb color
 
 -- vim.opt.autocomplete = true -- NATIVE autocomplete in insert mode
-vim.opt.completeopt = { "fuzzy", "menuone", "noselect", "popup" } -- options for how the autocomplete is shown. fuzzy: fuzzy finding, menuone: shows menu even if only one opt is available, popup: show extra info in popup menu
+vim.opt.completeopt = { "fuzzy", "menuone", "popup", "noinsert"}  -- options for how the autocomplete is shown. fuzzy: fuzzy finding, menuone: shows menu even if only one opt is available, popup: show extra info in popup menu
 
 vim.api.nvim_create_autocmd("TextYankPost", {
     desc = "Highlights text on yank",

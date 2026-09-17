@@ -26,5 +26,3 @@ vim.api.nvim_create_autocmd("FileType", {
     end,
 })
 
-vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, { desc = "Format local buffer" })

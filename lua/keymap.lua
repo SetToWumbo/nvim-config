@@ -3,6 +3,7 @@ vim.g.maplocalleader = " "
 
 vim.keymap.set("n", "<leader>q", "<cmd>q<cr>")
 
+
 -- Pane navigation
 vim.keymap.set("n", "<C-h>", "<C-w>h")
 vim.keymap.set("n", "<C-l>", "<C-w>l")
@@ -12,6 +13,10 @@ vim.keymap.set("n", "<C-k>", "<C-w>k")
 -- Pane creation
 vim.keymap.set("n", "<C-s>", "<C-w>s")
 vim.keymap.set("n", "<C-v>", "<C-w>v")
+
+-- Lsp
+vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
+vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, { desc = "Format local buffer" })
 
 -- Telescope
 vim.keymap.set('n', '<leader>ff', '<cmd>Telescope find files<cr>')
