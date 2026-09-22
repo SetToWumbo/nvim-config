@@ -17,6 +17,14 @@ vim.lsp.config("lua_ls", {
     },
 })
 
+vim.lsp.config('denols', {
+    root_markers = { "deno.json", "deno.jsonc" },
+})
+
+vim.lsp.config('ts_ls', {
+    root_markers = { "package.json" },
+})
+
 vim.lsp.enable({
     "lua_ls",
 })

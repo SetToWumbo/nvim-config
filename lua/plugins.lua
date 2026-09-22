@@ -8,6 +8,8 @@ vim.pack.add({
     { src = "https://github.com/nvim-telescope/telescope.nvim" },
     { src = "https://github.com/MunifTanjim/nui.nvim" },
     { src = "https://github.com/nvim-neo-tree/neo-tree.nvim" },
+    { src = "https://github.com/mrcjkb/rustaceanvim" },
+
 
 })
 
