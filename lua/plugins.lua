@@ -13,8 +13,6 @@ vim.pack.add({
 
 })
 
--- Colorscheme
-vim.cmd.colorscheme("palenight")
 
 --  Mason
 require('mason').setup()
@@ -46,7 +44,10 @@ require('mini.notify').setup()
 require('mini.icons').setup()
 require('mini.diff').setup()
 require('mini.git').setup()
-require('mini.statusline').setup()
+require('mini.statusline').setup({
+    use_icons = true,
+    set_vim_settings = true,
+})
 require('mini.snippets').setup()
 
 -- mini completions --
@@ -61,3 +62,6 @@ MiniCompletions.setup({
         end,
     }
 })
+
+-- Colorscheme
+vim.cmd.colorscheme("palenight")

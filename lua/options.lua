@@ -11,7 +11,7 @@ vim.opt.softtabstop = 4  -- number of cols inserted or deleted by <TAB> and <BS>
 vim.opt.expandtab = true -- makes tab insert amount of spaces instead of tab if true (on by default)
 
 vim.opt.autoindent = true
-vim.opt.wrap = false
+vim.opt.wrap = true
 vim.opt.signcolumn = "yes"
 vim.opt.cursorline = true
 vim.opt.cmdheight = 0 -- sets command line height, 0 hides it unless a command is being typed
