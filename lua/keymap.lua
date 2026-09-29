@@ -19,7 +19,7 @@ vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, { desc = "Format local buffer" })
 
 -- Telescope
-vim.keymap.set('n', '<leader>ff', '<cmd>Telescope find files<cr>')
+vim.keymap.set('n', '<leader>ff', '<cmd>Telescope find_files<cr>')
 vim.keymap.set('n', '<leader>fg', '<cmd>Telescope live_grep<cr>')
 vim.keymap.set('n', '<leader>fh', '<cmd>Telescope help_tags<cr>')
 vim.keymap.set({ 'n', 'v' }, '<leader>fs', '<cmd>Telescope grep_string<cr>')
