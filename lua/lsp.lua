@@ -26,5 +26,5 @@ vim.lsp.config('ts_ls', {
 })
 
 vim.lsp.enable({
-    "lua_ls",
+    "lua_ls","svelte"
 })
