@@ -9,10 +9,7 @@ vim.pack.add({
     { src = "https://github.com/MunifTanjim/nui.nvim" },
     { src = "https://github.com/nvim-neo-tree/neo-tree.nvim" },
     { src = "https://github.com/mrcjkb/rustaceanvim" },
-
-
 })
-
 
 --  Mason
 require('mason').setup()

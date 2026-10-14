@@ -4,7 +4,8 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = vim.tbl_deep_extend("force", capabilities, require("mini.completion").get_lsp_capabilities())
 
 vim.diagnostic.config({
-    virtual_text = true,
+    virtual_lines = true,
+    virtual_text = false,
 })
 
 vim.lsp.config("*", { capabilities = capabilities })
